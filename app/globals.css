@@ -1,3 +1,46 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.pop-in {
+    animation: popInAnimation 0.5s ease-in-out forwards;
+  }
+  
+  @keyframes popInAnimation {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes rapidFireAnimation {
+    0% {
+      opacity: 0;
+      transform: translateX(-50%);
+    }
+    20% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+    80% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(50%);
+    }
+  }
+  
+  h1 span {
+    animation: rapidFireAnimation 2s linear infinite;
+  }
+  
+  h1 span:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
