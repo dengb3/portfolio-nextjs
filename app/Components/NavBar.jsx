@@ -15,8 +15,8 @@ function NavBar() {
 
   return (
     <div className="fixed inset-x-0 top-0 z-10">
-      <div className="max-w-[1240px] m-auto flex justify-between items-center p-4">
-        <div className="p-2 flex flex-row items-center space-x-2 border-solid border-2 border-gray-100 rounded-3xl">
+      <div className="max-w-[1240px] m-auto flex justify-between items-center p-0">
+        <div className="flex border border-orange-300 px-4 py-1 text-orange-300 rounded-[5px] items-center gap-2 hover:bg-orange-300 hover:text-white transition duration-200">
           <a href="/Deng's Resume.pdf" download="Deng's Resume">
             Download CV
           </a>
@@ -54,7 +54,7 @@ function NavBar() {
       </div>
       {navOpen && (
         <aside
-          className={`fixed inset-y-0 left-0 z-50 flex flex-col items-center justify-center w-64 shadow-2xl ${
+          className={`fixed inset-y-0 left-0 z-50 flex flex-col items-center justify-center w-32 shadow-2xl ${
             isDarkMode ? "bg-[#121212] text-white" : "bg-gray-100 text-black"
           }`}
         >
