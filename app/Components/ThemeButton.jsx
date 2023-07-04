@@ -15,7 +15,7 @@ function ThemeButton() {
       onClick={toggleTheme}
     >
       {isDarkMode ? (
-        <SunIcon className="h-5 w-5 text-orange-300" />
+        <SunIcon className="h-5 w-5 text-white" />
       ) : (
         <MoonIcon className="h-5 w-5 text-slate-800" />
       )}

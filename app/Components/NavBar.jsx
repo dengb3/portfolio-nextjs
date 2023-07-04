@@ -7,7 +7,7 @@ import ThemeButton from "./ThemeButton";
 
 function NavBar() {
   const [navOpen, setNavOpen] = useState(false);
-  const { isDarkMode, toggleTheme } = useContext(ThemeContext);
+  const { isDarkMode } = useContext(ThemeContext);
 
   const toggleNav = () => {
     setNavOpen(!navOpen);
@@ -15,7 +15,7 @@ function NavBar() {
 
   return (
     <div className="fixed inset-x-0 top-0 z-10">
-      <div className="max-w-[1240px] m-auto flex justify-between items-center p-0">
+      <div className="max-w-[1240px] m-auto flex justify-between items-center p-0 font-semibold">
         <div className="flex border border-orange-300 px-4 py-1 text-orange-300 rounded-[5px] items-center gap-2 hover:bg-orange-300 hover:text-white transition duration-200">
           <a href="/Deng's Resume.pdf" download="Deng's Resume">
             Download CV

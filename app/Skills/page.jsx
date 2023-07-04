@@ -1,8 +1,12 @@
 import React from "react";
-import NavBar from "../Components/NavBar";
+import Heading from "../Components/Heading";
 
 function Skills() {
-  return <div>Welcome to skills!</div>;
+  return (
+    <section className="container mx-auto py-10 px-4">
+      <Heading title="My top skills.." />
+    </section>
+  );
 }
 
 export default Skills;
