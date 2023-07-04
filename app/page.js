@@ -4,8 +4,8 @@ import Typewriter from "typewriter-effect";
 import { ThemeContext } from "./Context/ThemeProvider";
 
 function Home() {
-  const { isDarkMode } = useContext(ThemeContext);
-  const showImage = !isDarkMode;
+  const { isDarkMode, isSmallScreen } = useContext(ThemeContext);
+  const showImage = !(isDarkMode || isSmallScreen);
 
   return (
     <div

@@ -4,10 +4,24 @@ export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useEffect(() => {
-    setThemeFromStorage();
-    addThemeListener();
+    const handleResize = () => {
+      const smallScreen = window.innerWidth <= 1000;
+      setIsSmallScreen(smallScreen);
+      console.log("Window inner width:", window.innerWidth); // Log the inner width
+      console.log("isSmallScreen:", smallScreen); // Log the updated value
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Call handleResize initially to set the initial state
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   const setThemeFromStorage = () => {
@@ -58,7 +72,7 @@ export const ThemeProvider = ({ children }) => {
   };
 
   return (
-    <ThemeContext.Provider value={{ isDarkMode, toggleTheme }}>
+    <ThemeContext.Provider value={{ isDarkMode, toggleTheme, isSmallScreen }}>
       {children}
     </ThemeContext.Provider>
   );
