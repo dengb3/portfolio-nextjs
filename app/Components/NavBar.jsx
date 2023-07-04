@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useState, useContext } from "react";
+import { useState, useContext } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { ThemeContext } from "../Context/ThemeProvider";
 import ThemeButton from "./ThemeButton";
@@ -22,21 +22,21 @@ function NavBar() {
           </a>
         </div>
         <ul className="hidden sm:flex">
-          <Link href="/">
-            <li className="p-4 hover:text-gray-600">Home</li>
-          </Link>
-          <Link href="/about">
-            <li className="p-4 hover:text-gray-600">About</li>
-          </Link>
-          <Link href="/skills">
-            <li className="p-4">Skills</li>
-          </Link>
-          <Link href="/projects">
-            <li className="p-4 hover:text-gray-600">Projects</li>
-          </Link>
-          <Link href="/contact">
-            <li className="p-4 hover:text-gray-600">Contact</li>
-          </Link>
+          <li className="p-4 hover:text-gray-600">
+            <Link href="/">Home</Link>
+          </li>
+          <li className="p-4 hover:text-gray-600">
+            <Link href="/about">About</Link>
+          </li>
+          <li className="p-4">
+            <Link href="/skills">Skills</Link>
+          </li>
+          <li className="p-4 hover:text-gray-600">
+            <Link href="/projects">Projects</Link>
+          </li>
+          <li className="p-4 hover:text-gray-600">
+            <Link href="/contact">Contact</Link>
+          </li>
           <ThemeButton />
         </ul>
         <div className="block sm:hidden">

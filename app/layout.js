@@ -4,11 +4,11 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import NavBar from "./Components/NavBar.jsx";
 import Head from "next/head";
-import About from "./about/page";
+import About from "./pages/about";
 import Home from "./page";
-import Skills from "./skills/page";
-import Projects from "./projects/page";
-import Contact from "./contact/page";
+import Skills from "./pages/skills";
+import Projects from "./pages/projects";
+import Contact from "./pages/contact";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,13 +30,13 @@ export default function RootLayout() {
             <NavBar />
           </header>
 
-          <main>
+          <div>
             <Home />
             <About />
             <Skills />
             <Projects />
             <Contact />
-          </main>
+          </div>
         </body>
       </ThemeProvider>
     </html>
