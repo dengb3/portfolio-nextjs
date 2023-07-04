@@ -44,3 +44,7 @@
     animation-delay: 0s;
   }
   
+  html, body {
+    scroll-behavior: smooth;
+  }
+  
