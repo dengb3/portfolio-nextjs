@@ -1,7 +1,7 @@
 "use client";
-import Link from "next/link";
 import { useState, useContext } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { Link as ScrollLink } from "react-scroll";
 import { ThemeContext } from "../Context/ThemeProvider";
 import ThemeButton from "./ThemeButton";
 
@@ -23,19 +23,59 @@ function NavBar() {
         </div>
         <ul className="hidden sm:flex">
           <li className="p-4 hover:text-gray-600">
-            <Link href="/">Home</Link>
+            <ScrollLink
+              to="home"
+              smooth={true}
+              duration={500}
+              spy={true}
+              offset={-50}
+            >
+              Home
+            </ScrollLink>
           </li>
           <li className="p-4 hover:text-gray-600">
-            <Link href="/about">About</Link>
+            <ScrollLink
+              to="about"
+              smooth={true}
+              duration={500}
+              spy={true}
+              offset={-50}
+            >
+              About
+            </ScrollLink>
           </li>
           <li className="p-4">
-            <Link href="/skills">Skills</Link>
+            <ScrollLink
+              to="skills"
+              smooth={true}
+              duration={500}
+              spy={true}
+              offset={-50}
+            >
+              Skills
+            </ScrollLink>
           </li>
           <li className="p-4 hover:text-gray-600">
-            <Link href="/projects">Projects</Link>
+            <ScrollLink
+              to="projects"
+              smooth={true}
+              duration={500}
+              spy={true}
+              offset={-50}
+            >
+              Projects
+            </ScrollLink>
           </li>
           <li className="p-4 hover:text-gray-600">
-            <Link href="/contact">Contact</Link>
+            <ScrollLink
+              to="contact"
+              smooth={true}
+              duration={500}
+              spy={true}
+              offset={-50}
+            >
+              Contact
+            </ScrollLink>
           </li>
           <ThemeButton />
         </ul>
@@ -61,44 +101,64 @@ function NavBar() {
           <nav>
             <ul className="space-y-4">
               <li>
-                <Link
-                  href="/"
+                <ScrollLink
+                  to="home"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  offset={-50}
                   className="text-xl font-bold hover:text-gray-300"
                 >
                   Home
-                </Link>
+                </ScrollLink>
               </li>
               <li>
-                <Link
-                  href="/about"
+                <ScrollLink
+                  to="about"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  offset={-50}
                   className="text-xl font-bold hover:text-gray-300"
                 >
                   About
-                </Link>
+                </ScrollLink>
               </li>
               <li>
-                <Link
-                  href="/skills"
+                <ScrollLink
+                  to="skills"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  offset={-50}
                   className="text-xl font-bold hover:text-gray-300"
                 >
                   Skills
-                </Link>
+                </ScrollLink>
               </li>
               <li>
-                <Link
-                  href="/projects"
+                <ScrollLink
+                  to="projects"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  offset={-50}
                   className="text-xl font-bold hover:text-gray-300"
                 >
                   Projects
-                </Link>
+                </ScrollLink>
               </li>
               <li>
-                <Link
-                  href="/contact"
+                <ScrollLink
+                  to="contact"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  offset={-50}
                   className="text-xl font-bold hover:text-gray-300"
                 >
                   Contact
-                </Link>
+                </ScrollLink>
               </li>
             </ul>
           </nav>
