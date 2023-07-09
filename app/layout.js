@@ -16,7 +16,6 @@ export default function RootLayout({ children }) {
       <ThemeProvider>
         <body className={inter.className}>
           <title>Deng Benjamin | Portfolio</title>
-
           <NavBar />
           <main>{children}</main>
         </body>

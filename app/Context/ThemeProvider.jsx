@@ -130,7 +130,7 @@ export const ThemeProvider = ({ children }) => {
       <Element name="skills" className="section">
         <Skills />
       </Element>
-      <Link to="skills" smooth={true} duration={500}></Link>
+      <Link to="about" smooth={true} duration={500}></Link>
       <Element name="projects" className="section">
         <Projects />
       </Element>

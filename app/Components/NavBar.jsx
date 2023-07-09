@@ -95,7 +95,7 @@ function NavBar() {
       {navOpen && (
         <aside
           className={`fixed inset-y-0 left-0 z-50 flex flex-col items-center justify-center w-32 shadow-2xl ${
-            isDarkMode ? "bg-[#121212] text-white" : "bg-gray-100 text-black"
+            isDarkMode ? "bg-[#121212] text-white" : "bg-white text-black"
           }`}
         >
           <nav>
