@@ -1,9 +1,7 @@
-"use client";
 import { ThemeProvider } from "./Context/ThemeProvider";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import NavBar from "./Components/NavBar.jsx";
-import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,9 +15,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <ThemeProvider>
         <body className={inter.className}>
-          <Head>
-            <title>Deng Benjamin | Portfolio</title>
-          </Head>
+          <title>Deng Benjamin | Portfolio</title>
+
           <NavBar />
           <main>{children}</main>
         </body>
