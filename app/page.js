@@ -22,7 +22,7 @@ function Home() {
       <div className="container mx-auto px-4">
         <div className="max-w-[450px] flex flex-col gap-[40px]">
           <div>
-            <h1 className="text-5xl">Hi! I'm Deng Benjamin</h1>
+            <h1 className="text-5xl">Hi! I&apos;m Deng Benjamin</h1>
             <h4 className="text-2xl mt-3 text-orange-300">
               <Typewriter
                 options={{
