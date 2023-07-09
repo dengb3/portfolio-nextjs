@@ -6,11 +6,11 @@ import "slick-carousel/slick/slick-theme.css";
 function About() {
   const images = [
     { src: "/peoplePerson.jpg", title: "Imaginative" },
-    { src: "/outcomeFocused.jpg", title: "Outcome focused" },
-    { src: "/notTradtional.jpg", title: "Collaborative" },
-    { src: "/notTradtional.jpg", title: "Leadership" },
-    { src: "/peoplePerson.jpg", title: "People Focused" },
-    { src: "/notTradtional.jpg", title: "Logical" },
+    { src: "/outcome.jpg", title: "Outcome focused" },
+    { src: "/collaborate.jpg", title: "Collaborative" },
+    { src: "/leadership.JPG", title: "Leadership" },
+    { src: "/peopleFocused.jpg", title: "People Focused" },
+    { src: "/logic.jpg", title: "Logical" },
   ];
   const paragraphs = [
     {
