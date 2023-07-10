@@ -1,10 +1,27 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 
 function About() {
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 768);
+    };
+
+    handleResize(); // Initial check
+
+    window.addEventListener("resize", handleResize); // Add event listener
+
+    return () => {
+      window.removeEventListener("resize", handleResize); // Clean up the event listener on component unmount
+    };
+  }, []);
+
   const images = [
     { src: "/peoplePerson.jpg", title: "Imaginative" },
     { src: "/outcome.jpg", title: "Outcome focused" },
@@ -60,8 +77,6 @@ function About() {
     centerMode: true,
     centerPadding: "15%",
   };
-
-  const isSmallScreen = window.innerWidth <= 768;
 
   if (isSmallScreen) {
     // Render carousel on smaller screens
