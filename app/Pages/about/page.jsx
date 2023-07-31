@@ -67,7 +67,6 @@ function About() {
   ];
 
   if (isSmallScreen) {
-    // Render carousel on smaller screens
     return (
       <div className="flex items-center justify-center">
         <div className="grid grid-cols-1  gap-5 md:grid-cols-2 lg:grid-cols-3 place-items-center">
@@ -103,7 +102,6 @@ function About() {
     );
   }
 
-  // Render individual images on larger screens
   return (
     <div className="flex  items-center justify-center">
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
