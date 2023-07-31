@@ -1,11 +1,11 @@
 "use client";
 import React, { createContext, useState, useEffect, useRef } from "react";
 import { Element, Link } from "react-scroll";
-import About from "../about/page";
+import About from "../Pages/about/page";
 import Home from "../page";
-import Skills from "../skills/page";
-import Projects from "../projects/page";
-import Contact from "../contact/page";
+import Skills from "../Pages/skills/page";
+import Projects from "../Pages/projects/page";
+import Contact from "../Pages/contact/page";
 
 export const ThemeContext = createContext();
 
@@ -18,13 +18,12 @@ export const ThemeProvider = ({ children }) => {
     const handleResize = () => {
       const smallScreen = window.innerWidth <= 1000;
       setIsSmallScreen(smallScreen);
-      console.log("Window inner width:", window.innerWidth); // Log the inner width
-      console.log("isSmallScreen:", smallScreen); // Log the updated value
+      console.log("Window inner width:", window.innerWidth);
+      console.log("isSmallScreen:", smallScreen);
     };
 
     window.addEventListener("resize", handleResize);
 
-    // Call handleResize initially to set the initial state
     handleResize();
 
     return () => {
@@ -40,7 +39,7 @@ export const ThemeProvider = ({ children }) => {
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = document.getElementById(sections[i]);
         if (section && section.offsetTop <= scrollPosition) {
-          setActiveSection(sections[i]); // Update the active section
+          setActiveSection(sections[i]);
           break;
         }
       }
@@ -118,9 +117,6 @@ export const ThemeProvider = ({ children }) => {
     >
       <Element name="home" className="section">
         {children}
-      </Element>
-      <Element name="home" className="section">
-        <Home />
       </Element>
       <Link to="about" smooth={true} duration={500}></Link>
       <Element name="about" className="section">

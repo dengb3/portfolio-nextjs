@@ -9,20 +9,21 @@ function Home() {
 
   return (
     <div
+      className="md:h-[40vh]"
       style={{
-        backgroundImage: showImage ? "url(/profile.jpg)" : "none",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundAttachment: "fixed",
-        height: "100vh",
+        backgroundImage: "url(/profile.jpg)",
+        backgroundSize: "contain",
+        backgroundPosition: "center center",
+        height: isSmallScreen ? "40vh" : "125vh",
         display: "flex",
+        backgroundRepeat: "no-repeat",
         alignItems: "center",
       }}
     >
       <div className="container mx-auto px-4">
         <div className="max-w-[450px] flex flex-col gap-[40px]">
           <div>
-            <h1 className="text-5xl">Hi! I&apos;m Deng Benjamin</h1>
+            <h1 className="text-5xl">Hi! I'm Deng Benjamin</h1>
             <h4 className="text-2xl mt-3 text-orange-300">
               <Typewriter
                 options={{
