@@ -75,7 +75,7 @@ function About() {
               key={index}
               className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30"
             >
-              <div className="h-96 w-72">
+              <div className="h-72 w-64">
                 <Image
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
                   alt=""

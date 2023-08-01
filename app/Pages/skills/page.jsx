@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 
 function Skills() {
   const skillsList = [
-    "SHOW ALL",
     "JAVASCRIPT",
     "HTML5",
     "NEXT-JS",

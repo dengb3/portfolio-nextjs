@@ -5,16 +5,15 @@ import { ThemeContext } from "./Context/ThemeProvider";
 
 function Home() {
   const { isDarkMode, isSmallScreen } = useContext(ThemeContext);
-  const showImage = !(isDarkMode || isSmallScreen);
 
   return (
     <div
       className="md:h-[40vh]"
       style={{
-        backgroundImage: "url(/profile.jpg)",
+        backgroundImage: isDarkMode ? "none" : "url(/profile.jpg)",
         backgroundSize: "contain",
-        backgroundPosition: "center center",
-        height: isSmallScreen ? "40vh" : "125vh",
+        backgroundPosition: "center",
+        height: isSmallScreen ? "30vh" : "125vh",
         display: "flex",
         backgroundRepeat: "no-repeat",
         alignItems: "center",
@@ -23,8 +22,16 @@ function Home() {
       <div className="container mx-auto px-4">
         <div className="max-w-[450px] flex flex-col gap-[40px]">
           <div>
-            <h1 className="text-5xl">Hi! I&lsquo;m Deng Benjamin</h1>
-            <h4 className="text-2xl mt-3 text-orange-300">
+            <h1 className={isSmallScreen ? "text-sm" : "text-5xl"}>
+              Hi! I&lsquo;m Deng Benjamin
+            </h1>
+            <h4
+              className={
+                isSmallScreen
+                  ? "text-xs mt-3 text-orange-300"
+                  : "text-2xl mt-3 text-orange-300"
+              }
+            >
               <Typewriter
                 options={{
                   strings: ["Full stack developer", "Lifelong learner"],
@@ -36,7 +43,7 @@ function Home() {
               />
             </h4>
           </div>
-          <div>
+          <div className={isSmallScreen ? "text-xs" : "text-2xl"}>
             <p>
               I have a passion for software development that is efficient,
               functional, and delivers a good user experience. I am constantly
